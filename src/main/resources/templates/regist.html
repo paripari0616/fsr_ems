@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thyemleaf.org">
+<head th:replace="~{common/head :: head-fragment(title='登録画面', scripts=~{}, links=~{})}"></head>
+<body>
+<div id="wrap">
+    <div id="top_content">
+        <div th:replace="~{common/header :: header-fragment(title='FSR')}"></div>
+        <div id="content">
+            <p id="whereami">
+            </p>
+            <h1>
+                登録画面
+            </h1>
+            <form th:object="${registForm}" method="post" id="form">
+                <table cellpadding="0" cellspacing="0" border="0"
+                       class="form_table">
+                    <tr>
+                        <td valign="middle" align="right">
+                            ユーザー名:
+                        </td>
+                        <td valign="middle" align="left">
+                            <input type="text" class="inputgri" th:field="*{username}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" align="right">
+                            姓名:
+                        </td>
+                        <td valign="middle" align="left">
+                            <input type="text" class="inputgri"  th:field="*{realname}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" align="right">
+                            パスワード:
+                        </td>
+                        <td valign="middle" align="left">
+                            <input type="password" class="inputgri" th:field="*{password}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" align="right">
+                            性別:
+                        </td>
+                        <td valign="middle" align="left">
+							<div>
+								<label th:each="genderOption : *{genderOptions}">
+									<input type="radio" th:field="*{gender}" th:value="${genderOption.code}">
+									<span th:text="${genderOption.name}"></span>
+								</label>
+							</div>
+                         </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" align="right">
+                            認証コード:
+                            <img id="code"/>
+                            <a href="#" th:data-url="@{/regist/distribute}" ></a>
+                        </td>
+                        <td valign="middle" align="left">
+                            <input type="text" class="inputgri" th:field="*{confirmCode}"/>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+					<input type="button" id="back" class="button" value="戻る &raquo;" th:data-url="@{/entry/init}" />
+                    <input type="button" id="confirm" class="button" value="登録 &raquo;" th:data-url="@{/regist/confirm}" />
+                    <input type="hidden" id="codeUrl" th:data-url="@{/regist/code}" />
+                </p>
+            </form>
+        </div>
+    </div>
+    <div th:replace="~{common/footer :: footer-fragment}"></div>
+</div>
+<script th:src="@{/js/regist.js}"></script>
+</body>
+</html>

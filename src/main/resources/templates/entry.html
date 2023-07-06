@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thyemleaf.org">
+<head th:replace="~{common/head :: head-fragment(title='ログイン画面', scripts=~{}, links=~{})}"></head>
+<body>
+<div id="wrap">
+    <div id="top_content">
+        <div th:replace="~{common/header :: header-fragment(title='FSR')}"></div>
+        <div id="content">
+            <p id="whereami">
+            </p>
+            <h1>
+                ログイン画面
+            </h1>
+            <form  th:object="${entryForm}" method="post" id="form">
+                <table class="form_table">
+                    <tr>
+                        <td>
+                            ユーザー名:
+                        </td>
+                        <td>
+                            <input type="text" class="inputgri" th:field="*{username}" placeholder="ユーザー名"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            パスワード:
+                        </td>
+                        <td>
+                            <input type="password" class="inputgri"  th:field="*{password}" placeholder="********"/>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    <input type="button" class="button" value="ログイン &raquo;" id="login"  th:data-url="@{/emp/init} "/>
+                    <input type="button" class="button" value="登録 &raquo;" id="regist" th:data-url="@{/regist/init} " />
+                </p>
+            </form>
+        </div>
+    </div>
+    <div th:replace="~{common/footer :: footer-fragment}"></div>
+</div>
+<script th:src="@{/js/entry.js}"></script>
+</body>
+</html>

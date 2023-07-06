@@ -1,0 +1,10 @@
+<head xmlns:th="http://www.thyemleaf.org" th:fragment="head-fragment(title, scripts, links)">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <th:block th:replace="${links}" />
+    <script type="text/javascript" th:src="@{/js/jquery/jquery-3.7.0.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/common.js}"></script>
+    <th:block th:replace="${scripts}" />
+</head>

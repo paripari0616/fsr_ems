@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thyemleaf.org">
+<head th:replace="~{common/head :: head-fragment(title='社員情報修正', scripts=~{}, links=~{})}"></head>
+<body>
+<div id="wrap">
+    <div id="top_content">
+        <div th:replace="~{common/header :: header-fragment(title='FSR')}"></div>
+        <div id="content">
+            <p id="whereami">
+            </p>
+            <h1>
+                社員情報修正
+            </h1>
+            <form th:object="${employeeForm}" method="post" id="form">
+                <table class="form_table">
+                    <tr>
+                        <td>
+                            社員ID:
+                        </td>
+                        <td>
+							[[*{id}]]
+                            <input type="hidden" th:field="*{id}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            姓名:
+                        </td>
+                        <td>
+                            <input type="text" class="inputgri" th:field="*{name}" th:value="*{name}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            給料:
+                        </td>
+                        <td>
+							<input type="text" class="inputgri" th:field="*{salary}" th:value="*{salary}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            年齢:
+                        </td>
+                        <td>
+							<input type="text" class="inputgri" th:field="*{age}" th:value="*{age}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            誕生日:
+                        </td>
+                        <td>
+							<input type="text" class="inputgri" th:field="*{birthday}" th:value="*{birthday}" />
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    <input type="button" class="button" value="修正" id="modify"/>
+                </p>
+            </form>
+        </div>
+    </div>
+    <div th:replace="~{common/footer :: footer-fragment}"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+def javaVersion = '17'
+
+group = 'com.qx'
+version = '1.0-SNAPSHOT'
+
+apply plugin:'java'
+apply plugin:'org.springframework.boot'
+apply plugin: 'application'
+
+springBoot {
+    mainClassName= 'com.qx.ems.EmsApplication'
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    // 定义了 java编译时使用的jdk版本
+    sourceCompatibility = javaVersion
+    // 确保.class文件与targetCompatibility所指定版本或者更新版本的java虚拟机兼容
+    targetCompatibility = javaVersion
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.2'
+    implementation 'org.postgresql:postgresql:42.6.0'
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+}
+
+test {
+    useJUnitPlatform()
+}
