@@ -6,7 +6,7 @@ plugins {
 
 def javaVersion = '17'
 
-group = 'com.qx'
+group = 'com.fsr'
 version = '1.0-SNAPSHOT'
 
 apply plugin:'java'
@@ -14,7 +14,7 @@ apply plugin:'org.springframework.boot'
 apply plugin: 'application'
 
 springBoot {
-    mainClassName= 'com.qx.ems.EmsApplication'
+    mainClassName= 'com.fsr.ems.EmsApplication'
 }
 
 repositories {
