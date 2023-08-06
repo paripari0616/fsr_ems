@@ -8,4 +8,19 @@
         	count(1)
         FROM t_user WHERE username  = #{username} and password = #{password}
     </select>
+    <select id="search" resultType="com.qx.ems.dto.Employee">
+        SELECT
+            emp.id,
+            usr.realname,
+            usr.age,
+            emp.salary,
+            usr.gender,
+            usr.birthday,
+            usr.address
+        FROM
+            t_emp as emp
+            inner join t_user as usr on emp.userId = usr.id
+        WHERE
+            emp.id = #{id}
+    </select>
 </mapper>
