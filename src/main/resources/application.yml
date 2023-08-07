@@ -12,6 +12,7 @@ spring:
             paths: /**
             enabled: true
   datasource:
+    initialization-mode: always
     url: jdbc:postgresql://localhost:5432/mybatis
     username: mybatis
     password: mybatis
