@@ -20,8 +20,8 @@ spring:
     init:
       mode: never
       enabled: true
-      schema-locations: classpath:schema.sql
-      data-locations: classpath:data.sql
+      schema-locations: classpath:db/migrations/schema.sql
+      data-locations: classpath:db/migrations/data.sql
       encoding: utf-8
 
 mybatis:
