@@ -12,11 +12,17 @@ spring:
             paths: /**
             enabled: true
   datasource:
-    initialization-mode: always
     url: jdbc:postgresql://localhost:5432/mybatis
     username: mybatis
     password: mybatis
     driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
+      enabled: true
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+      encoding: utf-8
 
 mybatis:
   configuration:
