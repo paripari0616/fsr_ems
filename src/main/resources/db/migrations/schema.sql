@@ -18,6 +18,7 @@ CREATE TABLE public.t_user (
   password character varying(40) NOT NULL,
   gender character varying(8) NOT NULL,
   age integer,
+  birthday date,
   address character varying(30),
   phonenumber character varying(20),
   createdate date,
