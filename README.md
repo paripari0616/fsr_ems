@@ -20,7 +20,7 @@
         
         Clone 完成后进入程序主程序页面 等待Gradle 自动下载完成依赖
         
-        ![Untitled](%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E6%89%8B%E5%86%8C%2071c5b04d0b194c0da009a71acac65aa7/Untitled%204.png)
+        ![idea_install_s04](https://github.com/paripari0616/Resourses/blob/main/vx_img_20230807193831.png?raw=true)
         
         在运行程序之前 确保PostgreSQL程序已经安装 同时建立完成 application.yml 对应的数据库和用户， 用户权限如下
         
@@ -34,27 +34,27 @@
         
         driver-class-name：驱动名
         
-        ![Untitled](%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E6%89%8B%E5%86%8C%2071c5b04d0b194c0da009a71acac65aa7/Untitled%205.png)
+        ![idea_install_s05](https://github.com/paripari0616/Resourses/blob/main/vx_img_appYml_database.png?raw=true)
         
         PgAdmin4中的配置
               mybatisDatabase：数据库名
         
         mybatisUser：用户
         
-        ![Untitled](%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E6%89%8B%E5%86%8C%2071c5b04d0b194c0da009a71acac65aa7/Untitled%206.png)
+        ![idea_install_s06](https://github.com/paripari0616/Resourses/blob/main/vx_img_20230807193859.png?raw=true)
         
         用户权限
         
-        ![Untitled](%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E6%89%8B%E5%86%8C%2071c5b04d0b194c0da009a71acac65aa7/Untitled%207.png)
+        ![idea_install_s07](https://github.com/paripari0616/Resourses/blob/main/vx_img_20230807193744.png?raw=true)
         
         配置完数据后点击右侧的 Gradle Symbolic Icon，运行右侧的bootRun 启动程序
         
-        ![Untitled](%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E6%89%8B%E5%86%8C%2071c5b04d0b194c0da009a71acac65aa7/Untitled%208.png)
+        ![idea_install_s08](https://github.com/paripari0616/Resourses/blob/main/vx_img_20230807193836.png?raw=true)
         
 2. (可选项) 下载Git
     
-    ![Untitled](%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E6%89%8B%E5%86%8C%2071c5b04d0b194c0da009a71acac65aa7/Untitled%209.png)
+    ![Git_install_s01](https://github.com/paripari0616/Resourses/blob/main/vx_img_git_version.png?raw=true)
     
 3. (可选项) 下载GitExtension
     
-    ![Untitled](%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E6%89%8B%E5%86%8C%2071c5b04d0b194c0da009a71acac65aa7/Untitled%2010.png)
+    ![Git_install_s02](https://github.com/paripari0616/Resourses/blob/main/vx_img_gitExtensions.png?raw=true)
