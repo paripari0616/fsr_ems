@@ -8,15 +8,15 @@
         1. 文件夹位置
         2. 安装成功后 双击Intellij IDEA 选择Get from VCS
         
-        ![Untitled](%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E6%89%8B%E5%86%8C%2071c5b04d0b194c0da009a71acac65aa7/Untitled%201.png)
+        ![idea_install_s01](https://github.com/paripari0616/Resourses/blob/main/vx_img_20230807193734.png?raw=true)
         
         设定本地路径和克隆项目路径
         
-        ![Untitled](%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E6%89%8B%E5%86%8C%2071c5b04d0b194c0da009a71acac65aa7/Untitled%202.png)
+        ![idea_install_s02](https://github.com/paripari0616/Resourses/blob/main/vx_img_20230807193821.png?raw=true)
         
         机器中没有下载好git的学员可以在此时点击 Download and Install 进行Git的安装 全程不需要操作等待一会儿 出现 Git has been installed 后点击 Clone
         
-        ![Untitled](%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E6%89%8B%E5%86%8C%2071c5b04d0b194c0da009a71acac65aa7/Untitled%203.png)
+        ![idea_install_s03](https://github.com/paripari0616/Resourses/blob/main/vx_img_20230807193827.png?raw=true)
         
         Clone 完成后进入程序主程序页面 等待Gradle 自动下载完成依赖
         
