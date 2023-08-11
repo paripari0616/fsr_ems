@@ -2,7 +2,7 @@
 
 1. 下载 IDEA Community Edition 2023.1.3
     
-    ![idea]([%E9%A1%B9%E7%9B%AE%E5%AF%BC%E5%85%A5%E6%89%8B%E5%86%8C%2071c5b04d0b194c0da009a71acac65aa7/Untitled.png](https://github.com/paripari0616/Resourses/blob/main/vx_img_idea.png?raw=true))
+    ![idea](https://github.com/paripari0616/Resourses/blob/main/vx_img_idea.png?raw=true)
     
     1. 安装选项
         1. 文件夹位置
