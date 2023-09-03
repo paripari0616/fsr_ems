@@ -26,7 +26,7 @@
         
         application.yml中数据库的相关配置
         
-        url：ems_thymeleaf
+        url：jdbc:postgresql://localhost:5432/ems_thymeleaf
         
         username：root
         
@@ -37,9 +37,9 @@
         ![idea_install_s05](https://github.com/paripari0616/Resourses/blob/main/application_Database_Properties.png?raw=true)
         
         PgAdmin4中的配置
-              mybatisDatabase：数据库名
+              mybatisDatabase：ems_thymeleaf
         
-        mybatisUser：用户
+        mybatisUser：root
         
         ![idea_install_s06](https://github.com/paripari0616/Resourses/blob/main/vx_img_20230807193859.png?raw=true)
         
