@@ -23,14 +23,4 @@ public class EntryController {
 	public String init(EntryForm form) {
 		return ScreenIdDefine.ENTRY;
 	}
-	
-	@PostMapping("/init")
-	public String initBack(EntryForm form) {
-		return ScreenIdDefine.ENTRY;
-	}
-
-	@PostMapping("/regist")
-	public String login(EntryForm form, Model model) {
-		return ScreenIdDefine.REGIST;
-	}
 }
