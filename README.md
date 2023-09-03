@@ -26,15 +26,15 @@
         
         application.yml中数据库的相关配置
         
-        url：端口后的名称为数据库名
+        url：ems_thymeleaf
         
-        username：用户名
+        username：root
         
-        password：密码
+        password：123456
         
-        driver-class-name：驱动名
+        driver-class-name：com.mysql.cj.jdbc.Driver
         
-        ![idea_install_s05](https://github.com/paripari0616/Resourses/blob/main/vx_img_appYml_database.png?raw=true)
+        ![idea_install_s05](https://github.com/paripari0616/Resourses/blob/main/application_Database_Properties.png?raw=true)
         
         PgAdmin4中的配置
               mybatisDatabase：数据库名
