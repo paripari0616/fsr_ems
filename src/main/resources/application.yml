@@ -12,13 +12,13 @@ spring:
             paths: /**
             enabled: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/mybatis
-    username: mybatis
-    password: mybatis
+    url: jdbc:postgresql://localhost:5432/ems_thymeleaf
+    username: root
+    password: 123456
     driver-class-name: org.postgresql.Driver
   sql:
     init:
-      mode: never
+      mode: always
       enabled: true
       schema-locations: classpath:db/migrations/schema.sql
       data-locations: classpath:db/migrations/data.sql
