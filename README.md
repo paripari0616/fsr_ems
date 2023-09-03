@@ -26,22 +26,23 @@
         
         application.yml中数据库的相关配置
         
-        url：端口后的名称为数据库名
+        url：jdbc:postgresql://localhost:5432/ems_thymeleaf
         
-        username：用户名
+        username：root
         
-        password：密码
+        password：123456
         
-        driver-class-name：驱动名
+        driver-class-name：com.mysql.cj.jdbc.Driver
         
-        ![idea_install_s05](https://github.com/paripari0616/Resourses/blob/main/vx_img_appYml_database.png?raw=true)
+        ![idea_install_s05](https://github.com/paripari0616/Resourses/blob/main/application_Database_Properties.png?raw=true)
         
         PgAdmin4中的配置
-              mybatisDatabase：数据库名
+        新建数据库：ems_thymeleaf
         
-        mybatisUser：用户
+        新建用户：root
+        新建用户密码：123456
         
-        ![idea_install_s06](https://github.com/paripari0616/Resourses/blob/main/vx_img_20230807193859.png?raw=true)
+        ![idea_install_s06](https://github.com/paripari0616/Resourses/blob/main/pg4admin_Properties.png?raw=true)
         
         用户权限
         
