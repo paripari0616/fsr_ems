@@ -22,7 +22,7 @@
         
         ![idea_install_s04](https://github.com/paripari0616/Resourses/blob/main/vx_img_20230807193831.png?raw=true)
         
-        在运行程序之前 确保PostgreSQL程序已经安装 同时建立完成 application.yml 对应的数据库和用户， 用户权限如下
+        在运行程序之前 确保PostgreSQL程序已经安装(PostgreSQL的安装next一路向下，安装位置随意) 同时建立完成 application.yml 对应的数据库和用户， 用户权限如下
         
         application.yml中数据库的相关配置
         
