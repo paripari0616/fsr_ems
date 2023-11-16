@@ -18,7 +18,7 @@ spring:
     driver-class-name: org.postgresql.Driver
   sql:
     init:
-      mode: always
+      mode: none
       enabled: true
       schema-locations: classpath:db/migrations/schema.sql
       data-locations: classpath:db/migrations/data.sql
