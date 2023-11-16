@@ -16,13 +16,6 @@ spring:
     username: root
     password: 123456
     driver-class-name: org.postgresql.Driver
-  sql:
-    init:
-      mode: none
-      enabled: true
-      schema-locations: classpath:db/migrations/schema.sql
-      data-locations: classpath:db/migrations/data.sql
-      encoding: utf-8
 
 mybatis:
   configuration:
