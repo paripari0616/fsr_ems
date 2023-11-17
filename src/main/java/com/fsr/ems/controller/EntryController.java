@@ -1,6 +1,8 @@
 package com.fsr.ems.controller;
 
 import com.fsr.ems.bean.EntryForm;
+import com.fsr.ems.service.EstimateCreateService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,4 +25,7 @@ public class EntryController {
 	public String init(EntryForm form) {
 		return ScreenIdDefine.ENTRY;
 	}
+
+	@Autowired
+	private EstimateCreateService estimateCreateService;
 }
