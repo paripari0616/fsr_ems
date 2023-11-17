@@ -9,7 +9,7 @@ public class Logtest {
     public static Logger logger = LoggerFactory.getLogger(Logtest.class);
 
     public static void main(String[] args) {
-        // 记录不同级别的日志
+
       logger.error("aaaaaaa");
     }
 }
