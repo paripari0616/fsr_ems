@@ -1,0 +1,31 @@
+body {
+            padding-top: 20px;
+        }
+        .invoice-title {
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .form-header {
+            margin-bottom: 15px;
+        }
+        .table-bordered td, .table-bordered th {
+            border: 1px solid #000 !important;
+        }
+        .footer-text {
+            font-size: 12px;
+        }
+        .bkc-gray{
+            background-color:gray;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .align-left {
+            text-align: left;
+        }
+        .align-right {
+            text-align: right;
+        }

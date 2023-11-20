@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thyemleaf.org">
+<head  xmlns:th="http://www.thyemleaf.org" th:fragment="head-fragment(title, scripts, links)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>御見積書（準委任)</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/css/quotation.css}" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/quotation.js}"></script>
+</head>
+<body>
+<div class="container">
+    <div class="text-center invoice-title">御　見　積　書 （準委任)</div>
+    <div class="form-header row">
+        <div class="col-6">
+            <div class="underline"><strong>株式会社XXX</strong></div>
+            <div>下記の通り御見積申し上げます</div>
+        </div>
+        <div class="col-6 text-right">
+            <div>見積番号:202301109-001</div>
+            <div>令和5年11月9日</div>
+        </div>
+    </div>
+    <div class="form-header row">
+        <div class="col-6">
+            <table>
+                <tbody>
+                <tr>
+                    <td>御見積金額</td>
+                    <td>0 円（税抜き）</td>
+                </tr>
+                <tr>
+                    <td>期間</td>
+                    <td>下記参照</td>
+                </tr>
+                <tr>
+                    <td>納期</td>
+                    <td>毎月末日</td>
+                </tr>
+                <tr>
+                    <td>検収日</td>
+                    <td>毎月末日</td>
+                </tr>
+                <tr>
+                    <td>支払方法</td>
+                    <td>月末締め,翌月末支払</td>
+                </tr>
+                <tr>
+                    <td>見積有効期間</td>
+                    <td>2023/12/31</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6">
+            <table class="float-right">
+                <tr>
+                    <td>社名      </td>
+                    <td class="horizontal-distribute">ＦＳＲ株式会社</td>
+                </tr>
+                <tr>
+                    <td>住所 〒     </td>
+                    <td class="horizontal-distribute">110-0005</td>
+                </tr>
+                <tr>
+                    <td>            </td>
+                    <td class="horizontal-distribute">東京都台東区上野3-19-4</td>
+                </tr>
+                <tr>
+                    <td>            </td>
+                    <td class="horizontal-distribute">KEN BUILDING 5階</td>
+                </tr>
+                <tr>
+                    <td>TEL         </td>
+                    <td class="horizontal-distribute">03-6876-0986</td>
+                </tr>
+                <tr>
+                    <td>FAX         </td>
+                    <td class="horizontal-distribute">03-6876-0986</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <td class="bkc-gray"><strong>件名/仕様No.</strong></td>
+            <td colspan="9"></td>
+        </tr>
+        <tr>
+            <td class="bkc-gray"><strong>作業内容</strong></td>
+            <td colspan="9"></td>
+        </tr>
+        <tr>
+            <td class="bkc-gray"><strong>作業責任者</strong></td>
+            <td>部署</td>
+            <td>人事管理部</td>
+            <td>氏名</td>
+            <td>孫　光</td>
+        </tr>
+        <!-- 複数行にわたる項目がある場合、ここに追加する -->
+        </tbody>
+    </table>
+    <table class="table table-bordered text-center">
+        <thead>
+        <tr class="bkc-gray">
+            <th class="flex-justify">氏名</th>
+            <th class="flex-justify">月数</th>
+            <th class="flex-justify">基本金額<br>（円/月）</th>
+            <th class="flex-justify">超過単価<br>（円/Ｈ）</th>
+            <th class="flex-justify">控除単価<br>（円/Ｈ）</th>
+            <th class="flex-justify">基準時間<br>下限(Ｈ)</th>
+            <th class="flex-justify">基準時間<br>上限(Ｈ)</th>
+            <th class="flex-justify">作業期間<br>開始</th>
+            <th class="flex-justify">作業期間<br>終了</th>
+            <th class="flex-justify">備考</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>鄭</td>
+            <td>3</td>
+            <td>100,000</td>
+            <td>550</td>
+            <td>710</td>
+            <td>140</td>
+            <td>180</td>
+            <td>2023/12/1</td>
+            <td>2023/12/31</td>
+            <td>xxxxxxx</td>
+        </tr>
+        <tr>
+            <td>合計</td>
+            <td colspan="9" class="align-left">300,000　円</td>
+        </tr>
+        <!-- 複数行にわたる項目がある場合、ここに追加する -->
+        </tbody>
+    </table>
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <td class="bkc-gray"><strong>精算方法</strong></td>
+            <td colspan="9">ひと月（１日～末日）基準とし、総作業時間が基準時間内の場合は基本金額とします。<br>
+                基準時間以外の作業に関しては超過、控除作業費を算出して精算します。(月の途中入退場時も同様)</td>
+        </tr>
+        <tr>
+            <td class="bkc-gray"><strong>精算単位</strong></td>
+            <td colspan="9">30分</td>
+        </tr>
+        <tr>
+            <td class="bkc-gray"><strong>追加作業費</strong></td>
+            <td colspan="9">(総作業時間ー基準時間(上限))　×　超過単価</td>
+        </tr>
+        <tr>
+            <td class="bkc-gray"><strong>控除作業費</strong></td>
+            <td colspan="9">(基準時間(下限)ー総作業時間)　×　控除単価</td>
+        </tr>
+        <tr>
+            <td class="bkc-gray"><strong>旅費の取扱い</strong></td>
+            <td colspan="9">主たる作業場所までの交通費は本見積に含みます。</td>
+        </tr>
+        <tr>
+            <td class="bkc-gray"><strong>備考</strong></td>
+            <td colspan="9"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="col-12">氏名は便宜的に記載しております。作業者については、同レベルの技術者を選定致します。<br>
+        上記金額のほか、消費税を加算して請求します。<br>
+        その他相談の必要な事項が発生した場合には別途協議させて頂きます。</div>
+</div>
+</body>
+</html>
