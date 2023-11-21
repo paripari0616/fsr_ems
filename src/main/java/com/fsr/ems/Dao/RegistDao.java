@@ -7,3 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface RegistDao {
 	void insertUser(User user);
 }
+
+
+
