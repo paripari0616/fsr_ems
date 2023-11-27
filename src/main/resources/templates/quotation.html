@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thyemleaf.org">
-<head  xmlns:th="http://www.thyemleaf.org" th:fragment="head-fragment(title, scripts, links)">
+<head xmlns:th="http://www.thyemleaf.org" th:fragment="head-fragment(title, scripts, links)">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>御見積書（準委任)</title>
@@ -9,7 +9,7 @@
     <script src="/ems/js/jquery/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="/ems/js/quotation.js" type="text/javascript" ></script>
+    <script src="/ems/js/quotation.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="container">
@@ -58,28 +58,37 @@
         <div class="col-6">
             <table class="float-right">
                 <tr>
-                    <td>社名      </td>
-                    <td class="horizontal-distribute">ＦＳＲ株式会社</td>
+                    <td>社名</td>
+                    <td class="horizontal-distribute">
+                        <select id="companySelect">
+                            <th:block th:each="company : ${quotationInfo.companies}">
+                                <option th:value="${company.name}" th:text="${company.name}"></option>
+                            </th:block>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
-                    <td>住所 〒     </td>
-                    <td class="horizontal-distribute">110-0005</td>
+                    <td>住所 〒</td>
+                    <td class="horizontal-distribute" id="postCode"
+                        th:text="${quotationInfo.companies[0].postCode}"></td>
                 </tr>
                 <tr>
-                    <td>            </td>
-                    <td class="horizontal-distribute">東京都台東区上野3-19-4</td>
+                    <td></td>
+                    <td class="horizontal-distribute" id="address1"
+                        th:text="${quotationInfo.companies[0].address1}"></td>
                 </tr>
                 <tr>
-                    <td>            </td>
-                    <td class="horizontal-distribute">KEN BUILDING 5階</td>
+                    <td></td>
+                    <td class="horizontal-distribute" id="address2"
+                        th:text="${quotationInfo.companies[0].address2}"></td>
                 </tr>
                 <tr>
-                    <td>TEL         </td>
-                    <td class="horizontal-distribute">03-6876-0986</td>
+                    <td>TEL</td>
+                    <td class="horizontal-distribute" id="tel" th:text="${quotationInfo.companies[0].tel}"></td>
                 </tr>
                 <tr>
-                    <td>FAX         </td>
-                    <td class="horizontal-distribute">03-6876-0986</td>
+                    <td>FAX</td>
+                    <td class="horizontal-distribute" id="fax" th:text="${quotationInfo.companies[0].fax}"></td>
                 </tr>
             </table>
         </div>
@@ -144,7 +153,8 @@
         <tr>
             <td class="bkc-gray"><strong>精算方法</strong></td>
             <td colspan="9">ひと月（１日～末日）基準とし、総作業時間が基準時間内の場合は基本金額とします。<br>
-                基準時間以外の作業に関しては超過、控除作業費を算出して精算します。(月の途中入退場時も同様)</td>
+                基準時間以外の作業に関しては超過、控除作業費を算出して精算します。(月の途中入退場時も同様)
+            </td>
         </tr>
         <tr>
             <td class="bkc-gray"><strong>精算単位</strong></td>
@@ -170,7 +180,8 @@
     </table>
     <div class="col-12">氏名は便宜的に記載しております。作業者については、同レベルの技術者を選定致します。<br>
         上記金額のほか、消費税を加算して請求します。<br>
-        その他相談の必要な事項が発生した場合には別途協議させて頂きます。</div>
+        その他相談の必要な事項が発生した場合には別途協議させて頂きます。
+    </div>
 </div>
 </body>
 </html>

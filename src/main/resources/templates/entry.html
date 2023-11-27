@@ -11,7 +11,7 @@
             <h1>
                 ログイン画面
             </h1>
-            <form  th:object="${entryForm}" method="post" id="form">
+            <form th:object="${entryForm}" method="post" id="form">
                 <table class="form_table">
                     <tr>
                         <td>
@@ -26,13 +26,15 @@
                             パスワード:
                         </td>
                         <td>
-                            <input type="password" class="inputgri"  th:field="*{password}" placeholder="********"/>
+                            <input type="password" class="inputgri" th:field="*{password}" placeholder="********"/>
                         </td>
                     </tr>
                 </table>
                 <p>
-                    <input type="button" class="button" value="ログイン &raquo;" id="login"  th:data-url="@{/emp/init} "/>
-                    <input type="button" class="button" value="登録 &raquo;" id="regist" th:data-url="@{/regist/init} " />
+                    <input type="button" class="button" value="ログイン &raquo;" id="login"
+                           th:data-url="@{/emp/init} "/>
+                    <input type="button" class="button" value="登録 &raquo;" id="regist"
+                           th:data-url="@{/regist/init} "/>
                 </p>
             </form>
         </div>

@@ -26,7 +26,7 @@
                             姓名:
                         </td>
                         <td>
-                            <input type="text" class="inputgri"  th:field="*{realname}"/>
+                            <input type="text" class="inputgri" th:field="*{realname}"/>
                         </td>
                     </tr>
                     <tr>
@@ -42,19 +42,19 @@
                             性別:
                         </td>
                         <td>
-							<div>
-								<label th:each="genderOption : *{genderOptions}">
-									<input type="radio" th:field="*{gender}" th:value="${genderOption.code}">
-									<span th:text="${genderOption.name}"></span>
-								</label>
-							</div>
-                         </td>
+                            <div>
+                                <label th:each="genderOption : *{genderOptions}">
+                                    <input type="radio" th:field="*{gender}" th:value="${genderOption.code}">
+                                    <span th:text="${genderOption.name}"></span>
+                                </label>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>
                             認証コード:
                             <img id="code"/>
-                            <a href="#" th:data-url="@{/regist/distribute}" ></a>
+                            <a href="#" th:data-url="@{/regist/distribute}"></a>
                         </td>
                         <td>
                             <input type="text" class="inputgri" th:field="*{confirmCode}"/>
@@ -62,9 +62,10 @@
                     </tr>
                 </table>
                 <p>
-					<input type="button" id="back" class="button" value="戻る &raquo;" th:data-url="@{/entry/init}" />
-                    <input type="button" id="confirm" class="button" value="登録 &raquo;" th:data-url="@{/regist/confirm}" />
-                    <input type="hidden" id="codeUrl" th:data-url="@{/regist/code}" />
+                    <input type="button" id="back" class="button" value="戻る &raquo;" th:data-url="@{/entry/init}"/>
+                    <input type="button" id="confirm" class="button" value="登録 &raquo;"
+                           th:data-url="@{/regist/confirm}"/>
+                    <input type="hidden" id="codeUrl" th:data-url="@{/regist/code}"/>
                 </p>
             </form>
         </div>

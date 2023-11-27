@@ -1,12 +1,22 @@
 $(document).ready(function() {
-    $.ajax({
-        url: 'http://localhost:8081/ems/quotation/getCompany?name=0000000001',
-        type: 'GET',
-        success: function(data) {
-            console.log('data:',data);
-        },
-        error: function(error) {
-            console.log('Error:', error);
-        }
+    // 会社情報更新
+    $('#companySelect').on('change', function() {
+        $.ajax({
+            url: '/ems/quotation/getCompany',
+            type: 'GET',
+            data: {
+                name: $('#companySelect').val(),
+            },
+            success: function(data) {
+                $('#postCode').html(data.postCode);
+                $('#address1').html(data.address1);
+                $('#address2').html(data.address2);
+                $('#tel').html(data.tel);
+                $('#fax').html(data.fax);
+            },
+            error: function(error) {
+                console.log('エラー発生:', error);
+            }
+        });
     });
 });

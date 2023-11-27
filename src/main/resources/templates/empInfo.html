@@ -4,66 +4,66 @@
 <body>
 <div id="wrap">
     <div id="top_content">
-		<div th:replace="~{common/header :: header-fragment(title='FSR')}"></div>
+        <div th:replace="~{common/header :: header-fragment(title='FSR')}"></div>
         <div id="content">
             <p id="whereami">
             </p>
             <h1>
                 社員一覧画面
             </h1>
-            <form  th:object="${employeeForm}" method="post" id="form">
-            <table class="table">
-                <tr class="table_header">
-                    <th>
-                        社員ID
-                    </th>
-                    <th>
-                        姓名
-                    </th>
-                    <th>
-                        給料
-                    </th>
-                    <th>
-                        年齢
-                    </th>
-                    <th>
-                        誕生日
-                    </th>
-                    <th>
-                        編集
-                    </th>
-                </tr>
-                <tr class="row1" th:each="emp, e : *{employees}">
-                    <td>
-						[[${emp.id}]]
-                        <input type="hidden" th:field="*{employees[__${e.index}__].id}"   />
-                    </td>
-                    <td>
-						[[${emp.name}]]
-                        <input type="hidden" th:field="*{employees[__${e.index}__].name}"   />
-                    </td>
-                    <td>
-						[[${emp.salary}]]
-                        <input type="hidden" th:field="*{employees[__${e.index}__].salary}"   />
-                    </td>
-                    <td>
-						[[${emp.age}]]
-                        <input type="hidden" th:field="*{employees[__${e.index}__].age}"   />
-                    </td>
-                    <td>
-						[[${emp.birthday}]]
-                        <input type="hidden" th:field="*{employees[__${e.index}__].birthday}"   />
-                    </td>
-                    <td>
- 						<a name="delete" th:data-index="${e.index}" th:data-url="@{/emp/delete}" >削除</a>&nbsp;
-                        <a name="modify" th:data-index="${e.index}" th:data-url="@{/emp/modify}" >修正</a>
-					</td>
-                </tr>
-            </table>
-            <p>
-                <input type="button" class="button" id="empEnr" value="社員登録"  th:data-url="@{/emp/init}" />
-            </p>
-            <input type="hidden" th:field="*{row}"  th:value="*{row}" />
+            <form th:object="${employeeForm}" method="post" id="form">
+                <table class="table">
+                    <tr class="table_header">
+                        <th>
+                            社員ID
+                        </th>
+                        <th>
+                            姓名
+                        </th>
+                        <th>
+                            給料
+                        </th>
+                        <th>
+                            年齢
+                        </th>
+                        <th>
+                            誕生日
+                        </th>
+                        <th>
+                            編集
+                        </th>
+                    </tr>
+                    <tr class="row1" th:each="emp, e : *{employees}">
+                        <td>
+                            [[${emp.id}]]
+                            <input type="hidden" th:field="*{employees[__${e.index}__].id}"/>
+                        </td>
+                        <td>
+                            [[${emp.name}]]
+                            <input type="hidden" th:field="*{employees[__${e.index}__].name}"/>
+                        </td>
+                        <td>
+                            [[${emp.salary}]]
+                            <input type="hidden" th:field="*{employees[__${e.index}__].salary}"/>
+                        </td>
+                        <td>
+                            [[${emp.age}]]
+                            <input type="hidden" th:field="*{employees[__${e.index}__].age}"/>
+                        </td>
+                        <td>
+                            [[${emp.birthday}]]
+                            <input type="hidden" th:field="*{employees[__${e.index}__].birthday}"/>
+                        </td>
+                        <td>
+                            <a name="delete" th:data-index="${e.index}" th:data-url="@{/emp/delete}">削除</a>&nbsp;
+                            <a name="modify" th:data-index="${e.index}" th:data-url="@{/emp/modify}">修正</a>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    <input type="button" class="button" id="empEnr" value="社員登録" th:data-url="@{/emp/init}"/>
+                </p>
+                <input type="hidden" th:field="*{row}" th:value="*{row}"/>
             </form>
         </div>
     </div>
