@@ -1,32 +1,26 @@
 package com.fsr.ems.controller;
 
-import com.fsr.ems.bean.EntryForm;
-import com.fsr.ems.dto.Companies;
-import com.fsr.ems.dto.Party_B;
-import com.fsr.ems.service.CompaniesService;
-import com.fsr.ems.service.EstimateCreateService;
+import com.fsr.ems.define.ScreenIdDefine;
+import com.fsr.ems.dto.Company;
+import com.fsr.ems.service.QuotationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.fsr.ems.define.ScreenIdDefine;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/quotation")
 public class QuotationController {
 	@Autowired
-	private EstimateCreateService estimateCreateService;
-	@Autowired
-	private CompaniesService companiesService;
-	@GetMapping("/init")
-	public String init(Companies companies) {
-		Companies Company = companiesService.getCompanies(companies);
+	private QuotationService quotationService;
 
+	@GetMapping("/init")
+	public String getCompany() {
 		return ScreenIdDefine.QUOTATION;
 	}
 
+	@GetMapping("/getCompany")
+	@ResponseBody
+	public Company getCompany(@RequestParam(required = true,name = "name") String name) {
+		return quotationService.getCompany(name);
+	}
 }

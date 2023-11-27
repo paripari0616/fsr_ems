@@ -1,20 +1,12 @@
-'use-strict'
-$(()=>{
-	const nowDate = () => {
-		const dateTime = new Date();
-		const options = { year: 'numeric', month: 'long', day: 'numeric' };
-		const dt =dateTime.toLocaleDateString(undefined, options);
-		$("#nowDate").text(dt);
-	}
-	nowDate();
-	
-	$(document).on("click", "#back", (e)=>{
-		let triggerId = e.target.id;
-		if(triggerId !== undefined){
-			$("#form").prop("action", $(e.currentTarget).data("url"));
-			$("#form").submit();
-		}
-	});
-
-    // 二重送信処理
+$(document).ready(function() {
+    $.ajax({
+        url: 'http://localhost:8081/ems/quotation/getCompany?name=0000000001',
+        type: 'GET',
+        success: function(data) {
+            console.log('data:',data);
+        },
+        error: function(error) {
+            console.log('Error:', error);
+        }
+    });
 });

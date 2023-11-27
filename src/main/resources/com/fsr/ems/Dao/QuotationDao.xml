@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fsr.ems.Dao.QuotationDao">
+    <select id="getCompany" resultType="com.fsr.ems.dto.Company">
+        SELECT  name,
+                post_code,
+                address_1,
+                address_2,
+                tel,
+                fax
+        FROM m_companies
+        WHERE name = #{name};
+    </select>
+
+</mapper>
